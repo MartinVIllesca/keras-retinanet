@@ -54,11 +54,11 @@ def preprocess_image(x, mode='caffe'):
     # covert always to float32 to keep compatibility with opencv
     x = x.astype(np.float32)
 
-    if mode == 'tf':
-        x /= 127.5
-        x -= 1.
-    elif mode == 'caffe':
-        x -= [103.939, 116.779, 123.68]
+    # if mode == 'tf':
+    #     x /= 127.5
+    #     x -= 1.
+    # elif mode == 'caffe':
+    #     x -= [103.939, 116.779, 123.68]
 
     return x
 
